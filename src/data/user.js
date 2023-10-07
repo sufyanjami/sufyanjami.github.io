@@ -37,12 +37,12 @@ const INFO = {
 		},
 
 		{
-			title: "Project 2",
+			title: "Personal Task Manager",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"Personal Task Manager - Add your tasks and toggle the ones you have completed or delete them.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://sufyanjami.github.io/personal-task-manager/",
 		},
 
 		{
