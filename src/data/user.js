@@ -40,7 +40,7 @@ const INFO = {
 			title: "Personal Task Manager",
 			description:
 				"Personal Task Manager - Add your tasks and toggle the ones you have completed or delete them.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+			logo: "./project2.png",
 			linkText: "View Project",
 			link: "https://sufyanjami.github.io/personal-task-manager/",
 		},
