@@ -46,12 +46,12 @@ const INFO = {
 		},
 
 		{
-			title: "Project 3",
+			title: "Recipe Finder",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
+				"Enter ingredients separated by commas to find recipes. This uses the Spoonacular API.",
+			logo: "./project3.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://sufyanjami.github.io/recipe-finder/",
 		},
 
 		{
