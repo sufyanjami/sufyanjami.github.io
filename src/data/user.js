@@ -55,12 +55,12 @@ const INFO = {
 		},
 
 		{
-			title: "Project 4",
+			title: "Travel List",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Travel List application is a tool to help you track all of the items you need packed.",
+			logo: "./project4.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://sufyanjami.github.io/travel-list/",
 		},
 
 		{
