@@ -18,7 +18,7 @@ const INFO = {
 	homepage: {
 		title: "Hey, I'm Sufyan. Full-Stack Software Engineer",
 		description:
-			"Passionate software developer who has a love for writing clean, concise and efficient code. Some technologies I like working with: React, Java, C#, JavaScript, HTML, CSS and Python.",
+			"I'm a software developer with a genuine passion for coding. It's not just about writing lines of code, but about crafting solutions that work seamlessly. My expertise spans technologies like React, Java, C#, JavaScript, HTML, CSS, and Python. Each one has been a unique journey, teaching me different ways to approach problems.",
 	},
 
 	about: {
@@ -28,12 +28,12 @@ const INFO = {
 
 	projects: [
 		{
-			title: "React Pizza Menu",
+			title: "Travel List",
 			description:
-				"Sufyan's Fast React Pizzeria - Authentic Italian cuisine with 6 creatives dishes to choose from.",
-			logo: "./project1.png",
+				"Travel List application is a tool to help you track all of the items you need packed.",
+			logo: "./project4.png",
 			linkText: "View Project",
-			link: "https://sufyanjami.github.io/pizza-menu/",
+			link: "https://sufyanjami.github.io/travel-list/",
 		},
 
 		{
@@ -55,21 +55,21 @@ const INFO = {
 		},
 
 		{
-			title: "Travel List",
+			title: "React Pizza Menu",
 			description:
-				"Travel List application is a tool to help you track all of the items you need packed.",
-			logo: "./project4.png",
+				"Sufyan's Fast React Pizzeria - Authentic Italian cuisine with 6 creatives dishes to choose from.",
+			logo: "./project1.png",
 			linkText: "View Project",
-			link: "https://sufyanjami.github.io/travel-list/",
+			link: "https://sufyanjami.github.io/pizza-menu/",
 		},
 
 		{
-			title: "Project 5",
+			title: "Eat-N-Split",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Split the bill with your friends, you can add a new friend to split the bill with or choose from exisiting friends.",
+			logo: "project5.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "sufyanjami.github.io/eat-n-split/",
 		},
 
 		{

@@ -46,24 +46,27 @@ const About = () => {
 
 								<div className="subtitle about-subtitle">
 									<h3>
-										I've worked on many different projects
-										over the years and I'm proud of the
-										progress I've made. I'm very passionate
-										about developing products that people
-										love. With the experience and knowledge
-										I'm gaining everyday, I'm excited about
-										where this journey will take me!
+										Over the years, I've honed my skills on
+										various projects, and I'm passionate
+										about creating impactful products. I'm
+										eager to see where my experience takes
+										me next.
 										<br />
 										<br />
-										if you have a project idea or are
-										intersted in collaboring together, don't
-										hestitate to contact me. Also feel free
-										to check out the code and suggest any
-										improvements or enhancements you might
-										have in mind. Collaborating with others
-										is a great way to learn and grow, and
-										I'm always open to new ideas and
-										feedback.
+										Anticipating the next phase of my
+										professional journey fills me with
+										excitement and purpose. I'm committed to
+										staying ahead, embracing new techniques,
+										and refining my expertise.
+										<br />
+										<br />
+										If you have a project or collaboration
+										in mind, please get in touch. Feel free
+										to review my code and suggest
+										improvements. I value collaboration and
+										am always open to feedback. Your
+										insights, feedback, and unique
+										perspectives are invaluable.
 									</h3>
 								</div>
 							</div>
