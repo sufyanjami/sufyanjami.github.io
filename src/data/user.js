@@ -69,7 +69,7 @@ const INFO = {
 				"Split the bill with your friends, you can add a new friend to split the bill with or choose from exisiting friends.",
 			logo: "project5.png",
 			linkText: "View Project",
-			link: "sufyanjami.github.io/eat-n-split/",
+			link: "https://sufyanjami.github.io/eat-n-split/",
 		},
 
 		{
