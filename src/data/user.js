@@ -73,12 +73,12 @@ const INFO = {
 		},
 
 		{
-			title: "Project 6",
+			title: "usePopcorn",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Search and add movies to your list called movies you watched. See and add your own rating.",
+			logo: "project6.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://sufyanjami.github.io/usepopcorn/",
 		},
 	],
 };
