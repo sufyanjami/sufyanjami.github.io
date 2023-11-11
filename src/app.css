@@ -101,11 +101,11 @@
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
 	.content-wrapper {
 		max-width: 90%;
 		margin: 0 auto;
-		padding: 0 10px;
+		/* padding: 0 10px; */
 	}
 
 	.page-content:before,
@@ -114,6 +114,7 @@
 	}
 
 	.title {
+		padding-top: 100px;
 		width: 100%;
 	}
 

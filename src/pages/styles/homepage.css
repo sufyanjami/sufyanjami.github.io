@@ -4,11 +4,11 @@
 	display: flex;
 	justify-content: left;
 	align-items: center;
-	padding-top: 130px;
+	padding-top: 95px;
 }
 
 .homepage-container {
-	padding-top: 25px;
+	/* padding-top: 25px; */
 }
 
 .homepage-first-area {
@@ -124,8 +124,8 @@
 	}
 
 	.homepage-image-container {
-		padding-top: 50px;
-		padding-bottom: 50px;
+		/* padding-top: 50px; */
+		padding-bottom: 80px;
 		margin-left: 10px;
 		order: 1;
 	}
