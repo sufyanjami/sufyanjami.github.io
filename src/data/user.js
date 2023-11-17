@@ -16,7 +16,7 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Hey, I'm Sufyan. Full-Stack Software Engineer",
+		title: "Hey, I'm Sufyan. Full-Stack Software Developer",
 		description:
 			"I'm a software developer with a genuine passion for coding. It's not just about writing lines of code, but about crafting solutions that work seamlessly. My expertise spans technologies like React, Java, C#, JavaScript, HTML, CSS, and Python. Each one has been a unique journey, teaching me different ways to approach problems.",
 	},
