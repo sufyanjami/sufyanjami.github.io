@@ -7,80 +7,186 @@ const INFO = {
 	},
 
 	socials: {
-		// twitter: "https://twitter.com/",
 		github: "https://github.com/sufyanjami",
 		linkedin: "https://www.linkedin.com/in/sufyanjami/",
-		// instagram: "https://instagram.com/",
-		// stackoverflow: "https://stackoverflow.com/",
-		// facebook: "https://facebook.com/",
 	},
 
 	homepage: {
-		title: "Hey, I'm Sufyan. Full-Stack Software Developer",
+		title: "Full Stack Developer with a focus on enterprise SaaS.",
 		description:
-			"I'm a software developer with a genuine passion for coding. It's not just about writing lines of code, but about crafting solutions that work seamlessly. My expertise spans technologies like React, Java, C#, JavaScript, HTML, CSS, and Python. Each one has been a unique journey, teaching me different ways to approach problems.",
+			"I've rebuilt flagship products, architected shared component libraries, and delivered features across frontend, backend, and cloud infrastructure. I work wherever the problem needs solving.",
 	},
 
 	about: {
-		title: "I'm Sufyan Jami. I live in Calgary, AB Canada.",
-		description: "",
+		title: "I'm Sufyan Jami. I live in Edmonton, AB Canada.",
+		description:
+			"Based in Edmonton, AB. Working remotely building enterprise software. Background spans agency work, document automation systems, multi-province web platforms, and SaaS products. I like solving complex problems and shipping software that handles real volume.",
 	},
+
+	jobs: [
+		{
+			slug: "entergrade",
+			company: "Entergrade Solutions",
+			role: "Full Stack Developer",
+			period: "2023–Present",
+			oneliner: "Enterprise SaaS for Microsoft Teams telephony",
+			duration: "Dec 2023 – Present",
+			summary:
+				"Building enterprise SaaS products for the Microsoft Teams telephony space, working across frontend applications, backend APIs, shared infrastructure, and cloud services.",
+			projects: [
+				{
+					title: "Shared Component Library",
+					description:
+						"Architected and built a reusable SvelteKit component library serving as the foundation for multiple product frontends. Combined Flowbite components with custom-built components tailored to specific business requirements. Documented with Storybook for team-wide adoption.",
+				},
+				{
+					title: "Flagship Portal Rebuild",
+					description:
+						"Led the complete rebuild of the company's primary product from v1 to v2. Rebuilt the frontend using the shared component library and refactored the .NET/C# backend that handles core business logic. This product serves the majority of company revenue.",
+				},
+				{
+					title: "Call Archiving Product",
+					description:
+						"Built the frontend for an archiving product using the shared component library, integrating with a dedicated .NET/C# backend. Used by the majority of the company's customer base.",
+				},
+				{
+					title: "Real-Time Queue Management",
+					description:
+						"Developed a real-time Teams queue management product end-to-end. Built the complete frontend and implemented all backend logic, including live data synchronization for queue monitoring.",
+				},
+				{
+					title: "MSP Platform",
+					description:
+						"Currently building a multi-tenant MSP management platform. Developed the frontend with standalone data mocking for independent iteration, then built the corresponding backend APIs. This system integrates with multiple backend services including a carrier module and purchasing/provisioning workflows.",
+				},
+				{
+					title: "Third-Party Integrations",
+					description:
+						"Integrated external REST APIs for analytics and reporting. Handled ongoing support, debugging, and log analysis for production issues.",
+				},
+				{
+					title: "SOC2 Compliance",
+					description:
+						"Drove the technical requirements for SOC2 certification, implementing necessary changes across the monorepo to achieve compliance.",
+				},
+			],
+			tech: ["SvelteKit", "TypeScript", "Tailwind CSS", "Flowbite", "Storybook", "C#", "ASP.NET Core", "Azure", "Azure DevOps", "Microsoft Teams APIs", "REST APIs", "SQL"],
+		},
+		{
+			slug: "cba",
+			company: "Canadian Bar Association",
+			role: "Web Developer",
+			period: "2022–2023",
+			oneliner: "Multi-province legal web platform",
+			duration: "Dec 2022 – Dec 2023",
+			summary:
+				"Managed and developed a multi-province web ecosystem serving legal professionals across Canada.",
+			projects: [
+				{
+					title: "Multi-Site Architecture",
+					description:
+						"Maintained 13 provincial websites, each with unique content, job boards, and page structures tailored to regional requirements. Coordinated changes across all properties to ensure consistency while respecting provincial customizations.",
+				},
+				{
+					title: "CMS & Backend Development",
+					description:
+						"Worked within a Kentico CMS legacy system with a .NET Core backend. Built custom page types and widgets based on feature requirements gathered in weekly stakeholder meetings.",
+				},
+				{
+					title: "User Management",
+					description:
+						"Administered user access control across all applications, managing permissions and roles for internal teams and members.",
+				},
+			],
+			tech: [".NET Core", "C#", "Kentico 13", "MySQL", "HTML", "CSS", "JavaScript"],
+		},
+		{
+			slug: "pbs",
+			company: "PBS Systems",
+			role: "Tier 2 Forms Programmer",
+			period: "2019–2022",
+			oneliner: "Document automation and internal tooling",
+			duration: "Apr 2019 – Dec 2022",
+			summary:
+				"Developed document automation systems for automotive dealership software, focusing on e-signature workflows and legacy printer compatibility.",
+			projects: [
+				{
+					title: "Document Automation",
+					description:
+						"Built custom programs to convert dealership forms into e-signable documents, handling the logic for digital signature workflows and compatibility with OKI legacy printers used by banks and dealerships for financing documents.",
+				},
+				{
+					title: "Internal Tooling",
+					description:
+						"Created productivity applications and systems within the department to streamline processes and improve team efficiency.",
+				},
+				{
+					title: "Team Development",
+					description:
+						"Mentored junior programmers through training and code reviews. Authored process documentation to onboard new hires and standardize workflows.",
+				},
+			],
+			tech: ["Custom scripting", "Document processing", "Internal tooling"],
+		},
+		{
+			slug: "allinone",
+			company: "All-In-One Digital",
+			role: "Web Developer",
+			period: "2018–2019",
+			oneliner: "Agency web development",
+			duration: "Dec 2018 – Apr 2019",
+			summary:
+				"Sole developer at a digital agency, managing the complete web portfolio for all clients.",
+			projects: [
+				{
+					title: "Client Portfolio Management",
+					description:
+						"Maintained and updated 8+ WordPress websites, handling ongoing changes, feature requests, and content updates across the entire client base.",
+				},
+				{
+					title: "New Client Builds",
+					description:
+						"Built new websites from scratch for incoming clients using WordPress and Divi, working from design requirements through to deployment.",
+				},
+				{
+					title: "Redesigns & Migrations",
+					description:
+						"Executed complete website redesigns for existing clients, balancing fresh designs with content preservation and SEO continuity.",
+				},
+			],
+			tech: ["WordPress", "Divi", "HTML", "CSS", "JavaScript", "SEO"],
+		},
+	],
 
 	projects: [
 		{
-			title: "Travel List",
-			description:
-				"Travel List application is a tool to help you track all of the items you need packed.",
-			logo: "./project4.png",
-			linkText: "View Project",
-			link: "https://sufyanjami.github.io/travel-list/",
+			title: "Project 1",
+			description: "TBD",
+			tech: ["SvelteKit", "TypeScript", "C#", "ASP.NET Core", "Azure"],
+			link: null,
 		},
-
 		{
-			title: "Personal Task Manager",
-			description:
-				"Personal Task Manager - Add your tasks and toggle the ones you have completed or delete them.",
-			logo: "./project2.png",
-			linkText: "View Project",
-			link: "https://sufyanjami.github.io/personal-task-manager/",
+			title: "Project 2",
+			description: "TBD",
+			tech: ["SvelteKit", "TypeScript", "C#", "ASP.NET Core", "Azure"],
+			link: null,
 		},
-
 		{
-			title: "Recipe Finder",
-			description:
-				"Enter ingredients separated by commas to find recipes. This uses the Spoonacular API.",
-			logo: "./project3.png",
-			linkText: "View Project",
-			link: "https://sufyanjami.github.io/recipe-finder/",
-		},
-
-		{
-			title: "React Pizza Menu",
-			description:
-				"Sufyan's Fast React Pizzeria - Authentic Italian cuisine with 6 creatives dishes to choose from.",
-			logo: "./project1.png",
-			linkText: "View Project",
-			link: "https://sufyanjami.github.io/pizza-menu/",
-		},
-
-		{
-			title: "Eat-N-Split",
-			description:
-				"Split the bill with your friends, you can add a new friend to split the bill with or choose from exisiting friends.",
-			logo: "project5.png",
-			linkText: "View Project",
-			link: "https://sufyanjami.github.io/eat-n-split/",
-		},
-
-		{
-			title: "usePopcorn",
-			description:
-				"Search and add movies to your list called movies you watched. See and add your own rating.",
-			logo: "project6.png",
-			linkText: "View Project",
-			link: "https://sufyanjami.github.io/usepopcorn/",
+			title: "Project 3",
+			description: "TBD",
+			tech: ["SvelteKit", "TypeScript", "C#", "ASP.NET Core", "Azure"],
+			link: null,
 		},
 	],
+
+	techStack: {
+		frontend: ["SvelteKit", "TypeScript", "React", "Tailwind CSS", "Flowbite", "Storybook"],
+		backend: ["C#", "ASP.NET Core", ".NET Core", "REST APIs", "SQL", "MySQL"],
+		cloud: ["Azure", "Azure DevOps", "CI/CD Pipelines"],
+		cms: ["Kentico", "WordPress"],
+		integrations: ["Microsoft Teams", "Third-Party APIs"],
+		tools: ["Git", "Jira", "Monorepo Architecture"],
+	},
 };
 
 export default INFO;

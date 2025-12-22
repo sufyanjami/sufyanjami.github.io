@@ -2,35 +2,22 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Sufyan Jami - Full Stack Developer focused on enterprise SaaS. Building products with SvelteKit, TypeScript, C#, and Azure. Based in Edmonton, AB.",
+		keywords: ["Sufyan Jami", "Full Stack Developer", "Enterprise SaaS", "SvelteKit", "TypeScript", "C#", "ASP.NET Core", "Azure", "Microsoft Teams", "Edmonton Developer"],
 	},
 
 	{
 		page: "about",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
-
-	{
-		page: "articles",
-		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
-	},
-
-	{
-		page: "projects",
-		description: "",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"About Sufyan Jami - Full stack developer based in Edmonton, AB. Working remotely on enterprise SaaS products, component libraries, and cloud infrastructure.",
+		keywords: ["Sufyan Jami", "About", "Full Stack Developer", "Edmonton", "Alberta", "Canada", "Remote Developer", "Enterprise Software"],
 	},
 
 	{
 		page: "contact",
 		description:
-			"If you're interested in collaborating on a project, feel free to reach out to me. I'm always open to new ideas and opportunities.",
-		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
+			"Get in touch with Sufyan Jami for full stack development opportunities. Specializing in SvelteKit, C#, and enterprise SaaS.",
+		keywords: ["Sufyan Jami", "Contact", "Hire Developer", "Full Stack", "Enterprise Developer"],
 	},
 ];
 
