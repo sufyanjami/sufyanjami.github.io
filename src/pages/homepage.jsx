@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
@@ -11,15 +11,14 @@ import Experience from "../components/experience/experience";
 import Projects from "../components/projects/projects";
 import TechStack from "../components/techStack/techStack";
 
+import useScrollToTop from "../hooks/useScrollToTop";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/homepage.css";
 
 const Homepage = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	useScrollToTop();
 
 	const currentSEO = SEO.find((item) => item.page === "home");
 

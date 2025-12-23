@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { faArrowLeft, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 
+import useScrollToTop from "../hooks/useScrollToTop";
 import INFO from "../data/user";
 
 import "./styles/projectDetail.css";
@@ -15,9 +17,7 @@ const ProjectDetail = () => {
 	const { slug } = useParams();
 	const project = INFO.projects.find((p) => p.slug === slug);
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	useScrollToTop();
 
 	if (!project || !project.slug) {
 		return <Navigate to="/404" replace />;
@@ -47,26 +47,37 @@ const ProjectDetail = () => {
 							<div className="project-detail-description">
 								{project.summary}
 							</div>
-							{project.link && (
-								<a
-									href={project.link}
-									target="_blank"
-									rel="noreferrer"
-									className="project-detail-link"
-								>
-									View Live
-									<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-								</a>
-							)}
+							<div className="project-detail-links">
+								{project.link && (
+									<a
+										href={project.link}
+										target="_blank"
+										rel="noreferrer"
+										className="project-detail-link"
+									>
+										View Live
+										<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+									</a>
+								)}
+								{project.github && (
+									<a
+										href={project.github}
+										target="_blank"
+										rel="noreferrer"
+										className="project-detail-link project-detail-link-secondary"
+									>
+										<FontAwesomeIcon icon={faGithub} />
+										Source Code
+									</a>
+								)}
+							</div>
 						</div>
 
 						<div className="project-detail-tech">
 							<div className="project-detail-tech-label">Built With</div>
 							<div className="project-detail-tech-list">
 								{project.tech.map((tech, index) => (
-									<span className="project-detail-tech-tag" key={index}>
-										{tech}
-									</span>
+									<span className="project-detail-tech-tag" key={index}>{tech}</span>
 								))}
 							</div>
 						</div>

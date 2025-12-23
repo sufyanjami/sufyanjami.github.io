@@ -38,6 +38,12 @@
 	margin-bottom: 20px;
 }
 
+.project-detail-links {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
 .project-detail-link {
 	display: inline-flex;
 	align-items: center;
@@ -49,11 +55,17 @@
 	padding: 10px 20px;
 	border-radius: 8px;
 	text-decoration: none;
-	transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .project-detail-link:hover {
 	opacity: 0.9;
+	transform: translateY(-1px);
+}
+
+.project-detail-link-secondary {
+	background-color: var(--quaternary-color);
+	color: var(--primary-color);
 }
 
 .project-detail-tech {

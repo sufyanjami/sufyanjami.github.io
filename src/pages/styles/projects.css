@@ -14,7 +14,69 @@
 }
 
 .projects-title {
-	margin-bottom: 40px;
+	margin-bottom: 16px;
+}
+
+.projects-subtitle {
+	color: var(--secondary-color);
+	margin-bottom: 24px;
+	max-width: 600px;
+}
+
+.projects-filter {
+	margin-bottom: 32px;
+}
+
+.projects-filter-label {
+	display: block;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--tertiary-color);
+	margin-bottom: 12px;
+}
+
+.projects-filter-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.projects-filter-tag {
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--secondary-color);
+	background-color: transparent;
+	border: 1px solid var(--card-border);
+	padding: 6px 14px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.projects-filter-tag:hover {
+	border-color: var(--link-color);
+	color: var(--link-color);
+}
+
+.projects-filter-tag.active {
+	background-color: var(--link-color);
+	border-color: var(--link-color);
+	color: white;
+}
+
+.projects-filter-clear {
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--tertiary-color);
+	background-color: transparent;
+	border: none;
+	padding: 6px 14px;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.projects-filter-clear:hover {
+	color: var(--primary-color);
 }
 
 .projects-grid {

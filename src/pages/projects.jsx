@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -7,17 +7,40 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 
+import useScrollToTop from "../hooks/useScrollToTop";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/projects.css";
 
 const ProjectsPage = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	useScrollToTop();
+	const [activeFilter, setActiveFilter] = useState(null);
 
 	const currentSEO = SEO.find((item) => item.page === "projects");
+
+	// Get unique tech tags from all projects
+	const allTechTags = useMemo(() => {
+		const tags = new Set();
+		INFO.projects.forEach(project => {
+			if (project.slug) {
+				project.tech.forEach(tech => tags.add(tech));
+			}
+		});
+		return Array.from(tags).sort();
+	}, []);
+
+	// Filter projects based on active filter
+	const filteredProjects = useMemo(() => {
+		if (!activeFilter) return INFO.projects;
+		return INFO.projects.filter(project =>
+			project.slug && project.tech.includes(activeFilter)
+		);
+	}, [activeFilter]);
+
+	const handleFilterClick = (tech) => {
+		setActiveFilter(activeFilter === tech ? null : tech);
+	};
 
 	return (
 		<React.Fragment>
@@ -43,9 +66,35 @@ const ProjectsPage = () => {
 						<div className="title projects-title">
 							Projects
 						</div>
+						<div className="subtitle projects-subtitle">
+							Side projects and tools I've built. All run client-side with no backend dependencies.
+						</div>
+
+						<div className="projects-filter">
+							<span className="projects-filter-label">Filter by tech:</span>
+							<div className="projects-filter-tags">
+								{allTechTags.map((tech) => (
+									<button
+										key={tech}
+										className={`projects-filter-tag ${activeFilter === tech ? 'active' : ''}`}
+										onClick={() => handleFilterClick(tech)}
+									>
+										{tech}
+									</button>
+								))}
+								{activeFilter && (
+									<button
+										className="projects-filter-clear"
+										onClick={() => setActiveFilter(null)}
+									>
+										Clear filter
+									</button>
+								)}
+							</div>
+						</div>
 
 						<div className="projects-grid">
-							{INFO.projects.map((project, index) => (
+							{filteredProjects.map((project, index) => (
 								project.slug ? (
 									<Link
 										to={`/project/${project.slug}`}
@@ -58,9 +107,7 @@ const ProjectsPage = () => {
 										</div>
 										<div className="projects-card-tech">
 											{project.tech.map((tech, techIndex) => (
-												<span className="projects-tech-tag" key={techIndex}>
-													{tech}
-												</span>
+												<span className="projects-tech-tag" key={techIndex}>{tech}</span>
 											))}
 										</div>
 										<div className="projects-card-link">
@@ -79,9 +126,7 @@ const ProjectsPage = () => {
 										</div>
 										<div className="projects-card-tech">
 											{project.tech.map((tech, techIndex) => (
-												<span className="projects-tech-tag" key={techIndex}>
-													{tech}
-												</span>
+												<span className="projects-tech-tag" key={techIndex}>{tech}</span>
 											))}
 										</div>
 										<div className="projects-card-coming-soon">Coming Soon</div>
