@@ -29,11 +29,11 @@
 }
 
 .projects-card {
-	background-color: #fafafa;
-	border: 1px solid var(--quaternary-color);
+	background-color: var(--card-background);
+	border: 1px solid var(--card-border);
 	border-radius: 12px;
 	padding: 20px;
-	transition: border-color 0.2s ease;
+	transition: border-color 0.2s ease, background-color 0.3s ease;
 }
 
 .projects-card:hover {

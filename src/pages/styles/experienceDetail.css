@@ -58,10 +58,11 @@
 }
 
 .experience-detail-project {
-	background-color: #fafafa;
-	border: 1px solid var(--quaternary-color);
+	background-color: var(--card-background);
+	border: 1px solid var(--card-border);
 	border-radius: 12px;
 	padding: 24px;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .experience-detail-project-title {

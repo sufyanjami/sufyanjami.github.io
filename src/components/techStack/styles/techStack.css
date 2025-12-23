@@ -29,10 +29,11 @@
 }
 
 .techstack-category {
-	background-color: #fafafa;
-	border: 1px solid var(--quaternary-color);
+	background-color: var(--card-background);
+	border: 1px solid var(--card-border);
 	border-radius: 12px;
 	padding: 20px;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .techstack-category-label {
@@ -54,10 +55,10 @@
 	font-size: 14px;
 	font-weight: 500;
 	color: var(--primary-color);
-	background-color: white;
+	background-color: var(--background-color);
 	padding: 6px 14px;
 	border-radius: 8px;
-	border: 1px solid var(--quaternary-color);
+	border: 1px solid var(--card-border);
 	transition: all 0.2s ease;
 }
 
