@@ -160,18 +160,37 @@ const INFO = {
 
 	projects: [
 		{
-			title: "Project 1",
-			description: "TBD",
-			tech: ["SvelteKit", "TypeScript", "C#", "ASP.NET Core", "Azure"],
-			link: null,
+			slug: "json-type-generator",
+			title: "JSON Type Generator",
+			description: "A browser-based tool that converts JSON to TypeScript interfaces or C# classes in real-time.",
+			tech: ["SvelteKit", "TypeScript", "Tailwind CSS", "Vitest"],
+			link: "https://json2types.vercel.app/",
+			summary: "Paste JSON on the left, get typed code on the right. No server, no dependencies beyond the build toolchain.",
+			features: [
+				"Real-time conversion - Output updates as you type",
+				"Editable output - Fine-tune generated code before copying",
+				"Format JSON - Auto-prettify messy or minified JSON",
+				"Upload JSON file - Load .json files directly",
+				"Download output - Save generated code as .ts or .cs file",
+				"Copy to clipboard - One-click copy",
+			],
+			why: "I built this because I frequently need to convert API responses into typed interfaces. Existing tools were either slow, required a server, or didn't handle edge cases well. This solves that with pure client-side code and smart type inference.",
+			highlights: [
+				"Smart type unification - merges properties from array objects",
+				"Distinguishes int vs float, handles mixed arrays gracefully",
+				"Handles edge cases: reserved keywords, invalid property names, deeply nested structures",
+				"51 unit tests covering type inference and code generation",
+			],
 		},
 		{
+			slug: null,
 			title: "Project 2",
 			description: "TBD",
 			tech: ["SvelteKit", "TypeScript", "C#", "ASP.NET Core", "Azure"],
 			link: null,
 		},
 		{
+			slug: null,
 			title: "Project 3",
 			description: "TBD",
 			tech: ["SvelteKit", "TypeScript", "C#", "ASP.NET Core", "Azure"],

@@ -14,6 +14,13 @@ const SEO = [
 	},
 
 	{
+		page: "projects",
+		description:
+			"Projects by Sufyan Jami - Developer tools and web applications built with SvelteKit, TypeScript, and modern technologies.",
+		keywords: ["Sufyan Jami", "Projects", "Developer Tools", "SvelteKit", "TypeScript", "Web Applications"],
+	},
+
+	{
 		page: "contact",
 		description:
 			"Get in touch with Sufyan Jami for full stack development opportunities. Specializing in SvelteKit, C#, and enterprise SaaS.",

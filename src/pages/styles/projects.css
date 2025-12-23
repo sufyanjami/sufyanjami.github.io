@@ -1,31 +1,27 @@
-@import "../../../data/styles.css";
+@import "../../data/styles.css";
 
-.projects-section {
-	padding-top: 40px;
-}
-
-.projects-header {
+.projects-logo-container {
 	display: flex;
-	align-items: center;
-	gap: 12px;
-	margin-bottom: 24px;
+	justify-content: left;
+	padding-top: 25px;
 }
 
-.projects-icon {
-	font-size: 20px;
-	color: var(--primary-color);
+.projects-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 120px;
+	padding-bottom: 80px;
 }
 
 .projects-title {
-	font-size: 20px;
-	font-weight: 700;
-	color: var(--primary-color);
+	margin-bottom: 40px;
 }
 
 .projects-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 16px;
+	margin-bottom: 80px;
 }
 
 .projects-card {
@@ -115,6 +111,10 @@
 }
 
 @media (max-width: 600px) {
+	.projects-container {
+		margin-top: 60px;
+	}
+
 	.projects-grid {
 		grid-template-columns: 1fr;
 	}

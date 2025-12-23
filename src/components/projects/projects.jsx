@@ -1,5 +1,6 @@
 import React from "react";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { faLaptopCode, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import INFO from "../../data/user";
@@ -16,25 +17,47 @@ const Projects = () => {
 
 			<div className="projects-grid">
 				{INFO.projects.map((project, index) => (
-					<div
-						className={`projects-card ${!project.link ? "projects-card-placeholder" : ""}`}
-						key={index}
-					>
-						<div className="projects-card-title">{project.title}</div>
-						<div className="projects-card-description">
-							{project.description}
-						</div>
-						<div className="projects-card-tech">
-							{project.tech.map((tech, techIndex) => (
-								<span className="projects-tech-tag" key={techIndex}>
-									{tech}
-								</span>
-							))}
-						</div>
-						{!project.link && (
+					project.slug ? (
+						<Link
+							to={`/project/${project.slug}`}
+							className="projects-card"
+							key={index}
+						>
+							<div className="projects-card-title">{project.title}</div>
+							<div className="projects-card-description">
+								{project.description}
+							</div>
+							<div className="projects-card-tech">
+								{project.tech.map((tech, techIndex) => (
+									<span className="projects-tech-tag" key={techIndex}>
+										{tech}
+									</span>
+								))}
+							</div>
+							<div className="projects-card-link">
+								View details
+								<FontAwesomeIcon icon={faArrowRight} className="projects-card-arrow" />
+							</div>
+						</Link>
+					) : (
+						<div
+							className="projects-card projects-card-placeholder"
+							key={index}
+						>
+							<div className="projects-card-title">{project.title}</div>
+							<div className="projects-card-description">
+								{project.description}
+							</div>
+							<div className="projects-card-tech">
+								{project.tech.map((tech, techIndex) => (
+									<span className="projects-tech-tag" key={techIndex}>
+										{tech}
+									</span>
+								))}
+							</div>
 							<div className="projects-card-coming-soon">Coming Soon</div>
-						)}
-					</div>
+						</div>
+					)
 				))}
 			</div>
 		</div>
