@@ -160,6 +160,31 @@ const INFO = {
 
 	projects: [
 		{
+			slug: "billionaire-tracker",
+			title: "BillionaireTracker",
+			description: "A real-time billionaire tracking app that displays live data from the Forbes Real-Time Billionaires API.",
+			tech: ["SvelteKit 2", "Svelte 5", "TypeScript", "Tailwind CSS 4"],
+			link: "https://billtracker-seven.vercel.app/",
+			github: "https://github.com/sufyanjami/billtracker",
+			image: null,
+			summary: "Explore the world's billionaires with real-time net worth data, daily movers, country/industry filters, and detailed profile pages. Server-rendered for fast loads with no client-side fetch waterfalls.",
+			features: [
+				"Real-time net worth data from Forbes API mirror",
+				"Daily movers - top gainers and losers by percentage",
+				"Filter by country, industry, women, or self-made",
+				"Paginated leaderboard with 3,000+ billionaires",
+				"Expandable table rows for quick details",
+				"Detailed profile pages with bio, assets, and rankings",
+			],
+			why: "I wanted to build something with real external API integration and server-side rendering. This project let me practice Result-type error handling, pre-computed sorting for large datasets, and Svelte 5 runes.",
+			highlights: [
+				"Server-side data loading - no loading spinners, better SEO",
+				"Pre-computed sort arrays to avoid UI freezing on 3,000 items",
+				"Result type pattern for explicit error handling",
+				"Svelte 5 runes ($state, $derived, $props) for reactive state",
+			],
+		},
+		{
 			slug: "json-type-generator",
 			title: "JSON Type Generator",
 			description: "A browser-based tool that converts JSON to TypeScript interfaces or C# classes in real-time.",

@@ -67,7 +67,7 @@ const ProjectsPage = () => {
 							Projects
 						</div>
 						<div className="subtitle projects-subtitle">
-							Side projects and tools I've built. All run client-side with no backend dependencies.
+							Side projects and developer tools I've built to solve real problems.
 						</div>
 
 						<div className="projects-filter">

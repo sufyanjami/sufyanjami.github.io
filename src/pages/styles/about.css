@@ -103,15 +103,15 @@
 	gap: 16px;
 	padding: 14px 16px;
 	background: var(--card-background, #fafafa);
-	border: 1px solid var(--border-color, #e0e0e0);
+	border: 1px solid var(--card-border, #e0e0e0);
 	border-radius: 10px;
 	text-decoration: none;
-	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.3s ease;
 }
 
 .about-timeline-item:hover {
-	border-color: var(--primary-color, #27272a);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+	border-color: var(--link-color);
+	transform: translateY(-2px);
 }
 
 .about-timeline-period {
@@ -134,7 +134,7 @@
 
 .about-timeline-company {
 	font-size: 0.875rem;
-	color: var(--primary-color, #27272a);
+	color: var(--link-color);
 	margin-top: 2px;
 }
 

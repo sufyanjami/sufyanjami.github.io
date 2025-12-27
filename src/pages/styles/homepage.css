@@ -72,7 +72,7 @@
 }
 
 .homepage-social-icon:hover {
-	color: var(--primary-color);
+	color: var(--link-color);
 }
 
 .homepage-after-title {
