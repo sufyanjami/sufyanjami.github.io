@@ -1,19 +1,18 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Socials from "../components/about/socials";
 
+import useScrollToTop from "../hooks/useScrollToTop";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/contact.css";
 
 const Contact = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	useScrollToTop();
 
 	const currentSEO = SEO.find((item) => item.page === "contact");
 

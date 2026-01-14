@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Socials from "../components/about/socials";
 
+import useScrollToTop from "../hooks/useScrollToTop";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/about.css";
 
 const About = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	useScrollToTop();
 
 	const currentSEO = SEO.find((item) => item.page === "about");
 
@@ -45,29 +45,27 @@ const About = () => {
 								</div>
 
 								<div className="subtitle about-subtitle">
-									<h3>
-										Over the years, I've honed my skills on
-										various projects, and I'm passionate
-										about creating impactful products. I'm
-										eager to see where my experience takes
-										me next.
-										<br />
-										<br />
-										Anticipating the next phase of my
-										professional journey fills me with
-										excitement and purpose. I'm committed to
-										staying ahead, embracing new techniques,
-										and refining my expertise.
-										<br />
-										<br />
-										If you have a project or collaboration
-										in mind, please get in touch. Feel free
-										to review my code and suggest
-										improvements. I value collaboration and
-										am always open to feedback. Your
-										insights, feedback, and unique
-										perspectives are invaluable.
-									</h3>
+									{INFO.about.description}
+								</div>
+
+								<div className="about-journey">
+									<h2 className="about-section-title">Career Journey</h2>
+									<div className="about-timeline">
+										{INFO.jobs.map((job, index) => (
+											<Link
+												to={`/experience/${job.slug}`}
+												className="about-timeline-item"
+												key={index}
+											>
+												<div className="about-timeline-period">{job.period}</div>
+												<div className="about-timeline-content">
+													<div className="about-timeline-role">{job.role}</div>
+													<div className="about-timeline-company">{job.company}</div>
+													<div className="about-timeline-oneliner">{job.oneliner}</div>
+												</div>
+											</Link>
+										))}
+									</div>
 								</div>
 							</div>
 
@@ -87,12 +85,14 @@ const About = () => {
 								</div>
 							</div>
 						</div>
+
 						<div className="about-socials-mobile">
 							<Socials />
 						</div>
-					</div>
-					<div className="page-footer">
-						<Footer />
+
+						<div className="page-footer">
+							<Footer />
+						</div>
 					</div>
 				</div>
 			</div>

@@ -40,9 +40,10 @@
 
 .footer-credits-text {
 	justify-content: flex-end;
-	color: black;
+	color: var(--primary-color);
 	font-size: 20px;
 	text-align: right;
+	transition: color 0.3s ease;
 }
 
 @media (max-width: 600px) {

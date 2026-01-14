@@ -1,0 +1,78 @@
+@import "../../../data/styles.css";
+
+.techstack-section {
+	padding-top: 40px;
+}
+
+.techstack-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 24px;
+}
+
+.techstack-icon {
+	font-size: 20px;
+	color: var(--primary-color);
+}
+
+.techstack-title {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--primary-color);
+}
+
+.techstack-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+}
+
+.techstack-category {
+	background-color: var(--card-background);
+	border: 1px solid var(--card-border);
+	border-radius: 12px;
+	padding: 20px;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.techstack-category-label {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--tertiary-color);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 12px;
+}
+
+.techstack-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.techstack-item {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--primary-color);
+	background-color: var(--background-color);
+	padding: 6px 14px;
+	border-radius: 8px;
+	border: 1px solid var(--card-border);
+	transition: all 0.2s ease;
+}
+
+.techstack-item:hover {
+	border-color: var(--link-color);
+	color: var(--link-color);
+}
+
+@media (max-width: 600px) {
+	.techstack-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.techstack-category {
+		padding: 16px;
+	}
+}
