@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(npm run build:*)",
+      "Bash(grep:*)",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/components/articles/style/article.css\" )",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/components/common/Footer.1.jsx\" )",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/components/homepage/article.jsx\" )",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/components/homepage/styles/article.css\" )",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/components/homepage/works.jsx\" )",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/components/homepage/styles/works.css\" )",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/data/articles.js\" )",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/pages/styles/articles.css\")",
+      "Bash(\"/mnt/c/users/sufya/documents/github/sufyanjami.github.io/src/components/common/styles/techTag.css\")"
+    ]
+  }
+}

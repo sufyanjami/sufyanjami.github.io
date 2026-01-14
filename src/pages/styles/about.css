@@ -1,0 +1,212 @@
+.about-logo-container {
+	display: flex;
+	justify-content: left;
+	padding-top: 25px;
+}
+
+.about-logo {
+	display: flex;
+	position: fixed;
+	border: 1px solid white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	top: 4vh;
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+	padding-top: 120px;
+}
+
+.about-main {
+	display: flex;
+	align-items: flex-start;
+	gap: 60px;
+}
+
+.about-right-side {
+	flex: 1;
+	max-width: 600px;
+}
+
+.about-title {
+	width: 100% !important;
+	margin-bottom: 24px;
+}
+
+.about-subtitle {
+	width: 100% !important;
+	line-height: 1.7;
+	font-size: 1.1rem;
+	color: var(--secondary-color, #65656d);
+}
+
+.about-left-side {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+}
+
+.about-image-container {
+	width: 300px;
+}
+
+.about-image-wrapper {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-image-wrapper img {
+	display: block;
+	width: 100%;
+	transition: transform 0.3s ease;
+}
+
+.about-image-wrapper:hover img {
+	transform: scale(1.02);
+}
+
+.about-socials {
+	padding-top: 40px;
+}
+
+.about-socials-mobile {
+	display: none;
+}
+
+/* Career Journey Section */
+.about-journey {
+	margin-top: 32px;
+}
+
+.about-section-title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--primary-color, #27272a);
+	margin-bottom: 16px;
+}
+
+.about-timeline {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.about-timeline-item {
+	display: flex;
+	gap: 16px;
+	padding: 14px 16px;
+	background: var(--card-background, #fafafa);
+	border: 1px solid var(--card-border, #e0e0e0);
+	border-radius: 10px;
+	text-decoration: none;
+	transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.3s ease;
+}
+
+.about-timeline-item:hover {
+	border-color: var(--link-color);
+	transform: translateY(-2px);
+}
+
+.about-timeline-period {
+	flex-shrink: 0;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	color: var(--secondary-color, #65656d);
+	min-width: 85px;
+}
+
+.about-timeline-content {
+	flex: 1;
+}
+
+.about-timeline-role {
+	font-size: 0.9375rem;
+	font-weight: 600;
+	color: var(--primary-color, #27272a);
+}
+
+.about-timeline-company {
+	font-size: 0.875rem;
+	color: var(--link-color);
+	margin-top: 2px;
+}
+
+.about-timeline-oneliner {
+	font-size: 0.8125rem;
+	color: var(--secondary-color, #65656d);
+	margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+	.about-logo {
+		z-index: 100;
+	}
+
+	.about-main {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.about-right-side {
+		max-width: 100%;
+		order: 2;
+	}
+
+	.about-left-side {
+		order: 1;
+	}
+
+	.about-image-container {
+		width: 280px;
+	}
+
+	.about-socials {
+		display: none;
+	}
+
+	.about-socials-mobile {
+		padding-top: 30px;
+		display: flex;
+	}
+}
+
+@media (max-width: 600px) {
+	.about-container {
+		padding-top: 60px;
+	}
+
+	.about-main {
+		gap: 30px;
+	}
+
+	.about-image-container {
+		width: 100%;
+		max-width: 280px;
+	}
+
+	.about-subtitle {
+		font-size: 1rem;
+	}
+
+	.about-timeline-item {
+		flex-direction: column;
+		gap: 6px;
+		padding: 12px 14px;
+	}
+
+	.about-timeline-period {
+		min-width: auto;
+	}
+
+	.about-section-title {
+		font-size: 1rem;
+		margin-bottom: 12px;
+	}
+}

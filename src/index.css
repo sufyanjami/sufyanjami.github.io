@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Roboto:wght@500&display=swap");
+@import "./data/styles.css";
+
+html, body {
+	margin: 0;
+	min-height: 100vh;
+	background-color: var(--background-color);
+	transition: background-color 0.3s ease;
+}
+
+body {
+	font-family: var(--primary-font);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
