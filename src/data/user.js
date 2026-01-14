@@ -42,12 +42,12 @@ const INFO = {
 				{
 					title: "Flagship Portal Rebuild",
 					description:
-						"Led the complete rebuild of the company's primary product from v1 to v2. Rebuilt the frontend using the shared component library and refactored the .NET/C# backend that handles core business logic. This product serves the majority of company revenue.",
+						"Led the complete rebuild of the company's primary product from v1 to v2. Rebuilt the frontend using the shared component library and refactored the .NET/C# backend that handles core business logic.",
 				},
 				{
 					title: "Call Archiving Product",
 					description:
-						"Built the frontend for an archiving product using the shared component library, integrating with a dedicated .NET/C# backend. Used by the majority of the company's customer base.",
+						"Built the frontend for an archiving product using the shared component library, integrating with a dedicated .NET/C# backend.",
 				},
 				{
 					title: "Real-Time Queue Management",
