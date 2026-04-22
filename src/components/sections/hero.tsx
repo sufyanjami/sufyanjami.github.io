@@ -37,6 +37,7 @@ export function Hero() {
               href={INFO.main.resume}
               external
               previewLabel="resume.pdf"
+              comment="see resume in new tab"
               className={cn(buttonVariants(), "bg-brand hover:opacity-90")}
             >
               <FileDown className="size-4" />
@@ -45,6 +46,7 @@ export function Hero() {
             <CodeLink
               href="/projects"
               previewLabel="view projects"
+              comment="view projects"
               className={buttonVariants({ variant: "outline" })}
             >
               view projects

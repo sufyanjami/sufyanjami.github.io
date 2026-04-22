@@ -9,15 +9,23 @@ export function HtmlPreview({
   href,
   label,
   target,
+  comment,
 }: {
   href: string;
   label: string;
   target?: string;
+  comment?: string;
 }) {
   const arrow = target === "_blank" ? " ↗" : "";
 
   return (
     <pre className="m-0 font-mono text-[11px] leading-relaxed whitespace-pre">
+      {comment && (
+        <>
+          <span className="text-zinc-500">{`// ${comment}`}</span>
+          {"\n"}
+        </>
+      )}
       <span className="text-blue-400">{"<a"}</span>
       {" "}
       <span className="text-zinc-400">href</span>

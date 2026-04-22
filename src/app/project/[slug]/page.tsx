@@ -47,6 +47,7 @@ export default async function ProjectDetailPage({
         <CodeLink
           href="/projects"
           previewLabel="cd .."
+          comment="back to all projects"
           className={buttonVariants({ variant: "ghost", size: "sm", className: "mb-6 gap-1" })}
         >
           <ArrowLeft className="size-4" />
@@ -67,6 +68,7 @@ export default async function ProjectDetailPage({
                 href={project.live}
                 external
                 previewLabel="view live"
+                comment="open live demo in new tab"
                 className={cn(buttonVariants(), "bg-brand hover:opacity-90")}
               >
                 <ExternalLink className="size-4" />
@@ -78,6 +80,7 @@ export default async function ProjectDetailPage({
                 href={project.repo}
                 external
                 previewLabel="source"
+                comment="open source on github"
                 className={buttonVariants({ variant: "outline" })}
               >
                 <GithubIcon className="size-4" />

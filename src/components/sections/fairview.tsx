@@ -118,7 +118,12 @@ function StatusBadge({ product }: { product: FairviewProduct }) {
         sideOffset={8}
         className={CODE_TOOLTIP_CLASS}
       >
-        <HtmlPreview href={product.href} label={label} target="_blank" />
+        <HtmlPreview
+          href={product.href}
+          label={label}
+          target="_blank"
+          comment={`open ${product.name.toLowerCase()} in new tab`}
+        />
       </TooltipContent>
     </Tooltip>
   );

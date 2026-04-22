@@ -20,6 +20,7 @@ export default function NotFound() {
         <CodeLink
           href="/"
           previewLabel="cd ~/"
+          comment="go home"
           className={cn(buttonVariants(), "bg-brand hover:opacity-90")}
         >
           cd ~/

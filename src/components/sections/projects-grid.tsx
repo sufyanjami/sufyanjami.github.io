@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { X } from "lucide-react";
 
 import { CdLink } from "@/components/site/cd-link";
+import { CodeLink } from "@/components/site/code-link";
 import { TechPill } from "@/components/site/tech-pill";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -70,9 +70,11 @@ export function ProjectsGrid({
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {filtered.map((project) => (
-          <Link
+          <CodeLink
             key={project.slug}
             href={`/project/${project.slug}`}
+            previewLabel={project.title}
+            comment={`view ${project.title.toLowerCase()} details`}
             className="group block"
           >
             <Card className="hover:border-brand/60 h-full transition-colors">
@@ -101,7 +103,7 @@ export function ProjectsGrid({
                 </div>
               </CardContent>
             </Card>
-          </Link>
+          </CodeLink>
         ))}
       </div>
 

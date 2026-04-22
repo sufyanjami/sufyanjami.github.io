@@ -17,19 +17,22 @@ type Props = {
   external?: boolean;
   /** Label shown inside the tooltip's <a> body. Defaults to children if string. */
   previewLabel?: string;
+  /** Lowercase comment line shown above the markup. e.g. "see resume in new tab" */
+  comment?: string;
   children: ReactNode;
   className?: string;
   ariaLabel?: string;
 };
 
 /**
- * A link that shows its own rendered HTML as a tooltip on hover/focus.
- * Drop-in replacement for next/link or <a> for any in-content link.
+ * A link that shows its own rendered HTML (with an optional comment) as a
+ * tooltip on hover/focus. Drop-in replacement for next/link or <a>.
  */
 export function CodeLink({
   href,
   external = false,
   previewLabel,
+  comment,
   children,
   className,
   ariaLabel,
@@ -37,6 +40,8 @@ export function CodeLink({
   const label =
     previewLabel ?? (typeof children === "string" ? children : "link");
   const target = external ? "_blank" : undefined;
+  const resolvedComment =
+    comment ?? (external ? "open in new tab" : undefined);
 
   const trigger = external ? (
     <a
@@ -59,7 +64,12 @@ export function CodeLink({
         sideOffset={8}
         className={CODE_TOOLTIP_CLASS}
       >
-        <HtmlPreview href={href} label={label} target={target} />
+        <HtmlPreview
+          href={href}
+          label={label}
+          target={target}
+          comment={resolvedComment}
+        />
       </TooltipContent>
     </Tooltip>
   );

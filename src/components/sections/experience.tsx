@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import { CdLink } from "@/components/site/cd-link";
+import { CodeLink } from "@/components/site/code-link";
 import { Section } from "@/components/site/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { INFO } from "@/content/portfolio";
@@ -15,9 +14,11 @@ export function Experience() {
     >
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {INFO.jobs.map((job) => (
-          <Link
+          <CodeLink
             key={job.slug}
             href={`/experience/${job.slug}`}
+            previewLabel={`${job.role} @ ${job.company}`}
+            comment={`view ${job.company.toLowerCase()} experience`}
             className="group block"
           >
             <Card className="hover:border-brand/60 h-full transition-colors">
@@ -39,7 +40,7 @@ export function Experience() {
                 </p>
               </CardContent>
             </Card>
-          </Link>
+          </CodeLink>
         ))}
       </div>
     </Section>

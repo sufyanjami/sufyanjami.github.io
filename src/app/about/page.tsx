@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { CodeLink } from "@/components/site/code-link";
 import { Container } from "@/components/site/container";
 import { Prompt } from "@/components/site/prompt";
 import { Socials } from "@/components/site/socials";
@@ -55,7 +55,12 @@ export default function AboutPage() {
         <ol className="space-y-4">
           {INFO.jobs.map((job) => (
             <li key={job.slug}>
-              <Link href={`/experience/${job.slug}`} className="group block">
+              <CodeLink
+                href={`/experience/${job.slug}`}
+                previewLabel={`${job.role} @ ${job.company}`}
+                comment={`view ${job.company.toLowerCase()} experience`}
+                className="group block"
+              >
                 <Card className="hover:border-brand/60 transition-colors">
                   <CardContent className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div className="space-y-1">
@@ -77,7 +82,7 @@ export default function AboutPage() {
                     </span>
                   </CardContent>
                 </Card>
-              </Link>
+              </CodeLink>
             </li>
           ))}
         </ol>

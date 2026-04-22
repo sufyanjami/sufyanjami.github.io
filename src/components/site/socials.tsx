@@ -43,12 +43,17 @@ function SocialItem({
 }) {
   const Icon = ICONS[social.icon];
   const isExternal = social.href.startsWith("http");
+  const comment =
+    social.icon === "mail"
+      ? "send me an email"
+      : `open my ${social.label.toLowerCase()} in new tab`;
 
   return (
     <CodeLink
       href={social.href}
       external={isExternal}
       previewLabel={social.label.toLowerCase()}
+      comment={comment}
       ariaLabel={social.label}
       className="border-border text-muted-foreground hover:text-brand hover:border-brand inline-flex items-center gap-2 rounded-sm border px-3 py-2 font-mono text-xs transition-colors"
     >

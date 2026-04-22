@@ -45,6 +45,7 @@ export default async function ExperienceDetailPage({
         <CodeLink
           href="/about"
           previewLabel="cd .."
+          comment="back to about"
           className={buttonVariants({ variant: "ghost", size: "sm", className: "mb-6 gap-1" })}
         >
           <ArrowLeft className="size-4" />
