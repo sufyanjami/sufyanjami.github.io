@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 export function Hero() {
   return (
     <section className="border-b">
-      <div className="grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-[1.6fr_1fr] md:py-24">
+      <div className="grid grid-cols-1 items-center gap-10 py-16 lg:grid-cols-[1.6fr_1fr] lg:py-24">
         <div className="space-y-6">
-          <h1 className="text-foreground text-3xl font-semibold tracking-tight text-balance sm:text-4xl md:text-5xl">
+          <h1 className="text-foreground text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
             {INFO.homepage.headline
               .split(/(?<=[.!?])\s+/)
               .map((line, i) => (
@@ -54,7 +54,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-xs md:max-w-none">
+        <div className="relative mx-auto w-full max-w-xs lg:max-w-none">
           <div className="border-border bg-muted/30 relative aspect-square overflow-hidden rounded-sm border">
             <Image
               src="/homepage.jpg"
