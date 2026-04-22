@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Renders a terminal-style prompt prefix like `~/about $`.
- * Coloring follows the Ubuntu default PS1 — path in blue, prompt char in green.
+ * Single-accent style — path is muted, only the prompt char is highlighted.
  */
 export function Prompt({
   path,
@@ -13,11 +13,12 @@ export function Prompt({
 }) {
   return (
     <span
-      className={cn("font-mono text-sm tracking-tight", className)}
+      className={cn(
+        "text-muted-foreground font-mono text-sm tracking-tight",
+        className,
+      )}
     >
-      <span className="text-brand-alt">
-        ~{path ? `/${path}` : ""}
-      </span>
+      <span>~{path ? `/${path}` : ""}</span>
       <span className="text-brand ml-1">$</span>
     </span>
   );

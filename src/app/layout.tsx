@@ -3,7 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 
 import { Footer } from "@/components/site/footer";
 import { NavBar } from "@/components/site/nav-bar";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider, themeInitScript } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { INFO } from "@/content/portfolio";
 
@@ -45,13 +45,14 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="bg-background text-foreground flex min-h-full flex-col">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body
+        suppressHydrationWarning
+        className="bg-background text-foreground flex min-h-full flex-col"
+      >
+        <ThemeProvider>
           <TooltipProvider>
             <NavBar />
             <main className="flex-1">{children}</main>

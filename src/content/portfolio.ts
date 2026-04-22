@@ -77,11 +77,6 @@ export const INFO = {
     headline: "Full-stack engineer. Mostly SaaS.",
     description:
       "TypeScript, SvelteKit, .NET, Azure. Currently at Entergrade shipping enterprise SaaS for Microsoft Teams telephony, and building products at Fairview Software.",
-    stack: ["TypeScript", "SvelteKit", ".NET", "Azure"],
-    now: [
-      { at: "entergrade", doing: "enterprise SaaS · Microsoft Teams telephony" },
-      { at: "fairview", doing: "building products" },
-    ],
   },
 
   about: {

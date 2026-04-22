@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Inline `cd ./<slug> →` affordance for card navigation.
- * Mimics an Ubuntu shell — green command, blue path, muted arrow.
+ * Single-accent style — only `cd` carries the accent, path is foreground, arrow is muted.
  */
 export function CdLink({
   slug,
@@ -21,7 +21,7 @@ export function CdLink({
       )}
     >
       <span className="text-brand">cd</span>
-      <span className="text-brand-alt">./{slug}</span>
+      <span className="text-foreground">./{slug}</span>
       <ArrowRight className="text-muted-foreground size-3" />
     </span>
   );

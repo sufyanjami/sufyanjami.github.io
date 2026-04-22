@@ -56,7 +56,7 @@ export function NavBar() {
                     : "text-muted-foreground hover:text-foreground",
                 )}
               >
-                <span className="text-brand-alt/70 mr-1">/</span>
+                <span className="text-muted-foreground mr-1">/</span>
                 {item.label}
               </Link>
             );
@@ -93,7 +93,7 @@ export function NavBar() {
                           : "text-muted-foreground hover:text-foreground",
                       )}
                     >
-                      <span className="text-brand-alt/70 mr-1">/</span>
+                      <span className="text-muted-foreground mr-1">/</span>
                       {item.label}
                     </Link>
                   );
