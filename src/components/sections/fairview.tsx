@@ -123,16 +123,15 @@ function StatusBadge({ product }: { product: FairviewProduct }) {
         sideOffset={8}
         className="border-border bg-zinc-950 max-w-none rounded-sm border p-3 text-zinc-100 [&_div:last-child]:bg-zinc-950 [&_div:last-child]:fill-zinc-950"
       >
-        <HtmlPreview href={product.href} />
+        <HtmlPreview href={product.href} label={label} />
       </TooltipContent>
     </Tooltip>
   );
 }
 
-function HtmlPreview({ href }: { href: string }) {
+function HtmlPreview({ href, label }: { href: string; label: string }) {
   return (
     <pre className="m-0 font-mono text-[11px] leading-relaxed whitespace-pre">
-      <span className="text-zinc-500">{"// hover demo — actual link markup\n"}</span>
       <span className="text-blue-400">{"<a"}</span>
       {" "}
       <span className="text-zinc-400">href</span>
@@ -144,7 +143,7 @@ function HtmlPreview({ href }: { href: string }) {
       <span className="text-emerald-300">{`"_blank"`}</span>
       <span className="text-blue-400">{">"}</span>
       {"\n  "}
-      <span className="text-zinc-100">visit ↗</span>
+      <span className="text-zinc-100">{label} ↗</span>
       {"\n"}
       <span className="text-blue-400">{"</a>"}</span>
     </pre>
