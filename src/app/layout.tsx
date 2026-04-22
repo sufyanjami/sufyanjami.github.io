@@ -29,9 +29,6 @@ export const metadata: Metadata = {
     siteName: INFO.main.name,
     type: "website",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({

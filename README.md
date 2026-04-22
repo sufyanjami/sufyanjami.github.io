@@ -44,7 +44,3 @@ propagates everywhere — buttons, links, focus rings, prompt markers.
 - `src/components/sections/*` — homepage sections (Hero, Fairview, Experience, Projects, TechStack)
 - `src/components/ui/*` — shadcn primitives
 - `src/components/icons/brand.tsx` — inline GitHub / LinkedIn SVGs (lucide dropped brand icons)
-
-## Archive
-
-The previous CRA-based portfolio lives under `archive/v1/` for reference.
