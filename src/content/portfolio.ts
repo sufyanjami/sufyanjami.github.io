@@ -108,6 +108,7 @@ export const INFO = {
           "Paste a YouTube link, get a transcript. Flat-rate pricing — no per-minute nickel-and-diming.",
         pricing: "$10 / month · 1000 transcriptions",
         status: "live",
+        href: "https://yt-transcriber.io/",
         tech: ["TypeScript", "Whisper", "Cloud Functions"],
       },
     ] satisfies FairviewProduct[],

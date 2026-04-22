@@ -13,9 +13,17 @@ export function Hero() {
     <section className="border-b">
       <div className="grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-[1.6fr_1fr] md:py-24">
         <div className="space-y-6">
-          <h1 className="text-foreground text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-            <span className="text-muted-foreground">{">"} </span>
-            {INFO.homepage.headline}
+          <h1 className="text-foreground text-3xl font-semibold tracking-tight text-balance sm:text-4xl md:text-5xl">
+            {INFO.homepage.headline
+              .split(/(?<=[.!?])\s+/)
+              .map((line, i) => (
+                <span key={i} className="block">
+                  {i === 0 && (
+                    <span className="text-muted-foreground">{">"} </span>
+                  )}
+                  {line}
+                </span>
+              ))}
           </h1>
 
           <TerminalCard title="sufyan@portfolio: ~/.bio">

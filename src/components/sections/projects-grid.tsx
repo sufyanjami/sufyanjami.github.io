@@ -77,6 +77,12 @@ export function ProjectsGrid({
           >
             <Card className="hover:border-brand/60 h-full transition-colors">
               <CardContent className="flex h-full flex-col gap-4">
+                <div className="flex items-start justify-between gap-2">
+                  <span className="text-muted-foreground font-mono text-[11px]">
+                    {project.slug}
+                  </span>
+                  <CdLink slug={project.slug} />
+                </div>
                 <h3 className="text-foreground text-base font-semibold tracking-tight">
                   {project.title}
                 </h3>
@@ -93,7 +99,6 @@ export function ProjectsGrid({
                     </span>
                   )}
                 </div>
-                <CdLink slug={project.slug} />
               </CardContent>
             </Card>
           </Link>

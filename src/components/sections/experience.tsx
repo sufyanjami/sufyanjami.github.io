@@ -22,9 +22,12 @@ export function Experience() {
           >
             <Card className="hover:border-brand/60 h-full transition-colors">
               <CardContent className="flex h-full flex-col gap-3">
-                <p className="text-muted-foreground font-mono text-[11px]">
-                  {job.period}
-                </p>
+                <div className="flex items-start justify-between gap-2">
+                  <p className="text-muted-foreground font-mono text-[11px]">
+                    {job.period}
+                  </p>
+                  <CdLink slug={job.slug} />
+                </div>
                 <div>
                   <h3 className="text-foreground text-base font-semibold tracking-tight">
                     {job.role}
@@ -34,7 +37,6 @@ export function Experience() {
                 <p className="text-muted-foreground flex-1 text-sm leading-relaxed">
                   {job.oneliner}
                 </p>
-                <CdLink slug={job.slug} />
               </CardContent>
             </Card>
           </Link>
