@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <Container>
-      <section className="space-y-8 py-20">
+      <section className="space-y-6 py-16">
         <Prompt path="contact" />
         <h1 className="text-foreground text-3xl font-semibold tracking-tight sm:text-4xl">
           Ways to connect

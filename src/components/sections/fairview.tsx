@@ -1,5 +1,7 @@
 import { ExternalLink } from "lucide-react";
 
+import { CodeLink } from "@/components/site/code-link";
+import { HtmlPreview } from "@/components/site/html-preview";
 import { Section } from "@/components/site/section";
 import { TechPill } from "@/components/site/tech-pill";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -22,6 +24,9 @@ const STATUS_DOT: Record<FairviewProduct["status"], string> = {
   beta: "bg-amber-500",
   "in-development": "bg-sky-500",
 };
+
+const CODE_TOOLTIP_CLASS =
+  "border-border bg-zinc-950 max-w-none rounded-sm border p-3 text-zinc-100 [&_div:last-child]:bg-zinc-950 [&_div:last-child]:fill-zinc-950";
 
 export function Fairview() {
   return (
@@ -69,16 +74,6 @@ function ProductCard({ product }: { product: FairviewProduct }) {
             <TechPill key={t} label={t} />
           ))}
         </div>
-        {product.href && (
-          <a
-            href={product.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand hover:text-foreground inline-flex items-center gap-1 font-mono text-xs"
-          >
-            visit <ExternalLink className="size-3" />
-          </a>
-        )}
       </CardContent>
     </Card>
   );
@@ -121,31 +116,10 @@ function StatusBadge({ product }: { product: FairviewProduct }) {
       <TooltipContent
         side="top"
         sideOffset={8}
-        className="border-border bg-zinc-950 max-w-none rounded-sm border p-3 text-zinc-100 [&_div:last-child]:bg-zinc-950 [&_div:last-child]:fill-zinc-950"
+        className={CODE_TOOLTIP_CLASS}
       >
-        <HtmlPreview href={product.href} label={label} />
+        <HtmlPreview href={product.href} label={label} target="_blank" />
       </TooltipContent>
     </Tooltip>
-  );
-}
-
-function HtmlPreview({ href, label }: { href: string; label: string }) {
-  return (
-    <pre className="m-0 font-mono text-[11px] leading-relaxed whitespace-pre">
-      <span className="text-blue-400">{"<a"}</span>
-      {" "}
-      <span className="text-zinc-400">href</span>
-      <span className="text-zinc-500">=</span>
-      <span className="text-emerald-300">{`"${href}"`}</span>
-      {"\n   "}
-      <span className="text-zinc-400">target</span>
-      <span className="text-zinc-500">=</span>
-      <span className="text-emerald-300">{`"_blank"`}</span>
-      <span className="text-blue-400">{">"}</span>
-      {"\n  "}
-      <span className="text-zinc-100">{label} ↗</span>
-      {"\n"}
-      <span className="text-blue-400">{"</a>"}</span>
-    </pre>
   );
 }

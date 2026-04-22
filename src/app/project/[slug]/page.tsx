@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 import { GithubIcon } from "@/components/icons/brand";
+import { CodeLink } from "@/components/site/code-link";
 import { Container } from "@/components/site/container";
 import { Prompt } from "@/components/site/prompt";
 import { TechPill } from "@/components/site/tech-pill";
@@ -44,13 +44,14 @@ export default async function ProjectDetailPage({
   return (
     <Container>
       <div className="py-10">
-        <Link
+        <CodeLink
           href="/projects"
+          previewLabel="cd .."
           className={buttonVariants({ variant: "ghost", size: "sm", className: "mb-6 gap-1" })}
         >
           <ArrowLeft className="size-4" />
           cd ..
-        </Link>
+        </CodeLink>
 
         <header className="space-y-4">
           <Prompt path={`projects/${project.slug}`} />
@@ -62,26 +63,26 @@ export default async function ProjectDetailPage({
           </p>
           <div className="flex flex-wrap items-center gap-2">
             {project.live && (
-              <a
+              <CodeLink
                 href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
+                external
+                previewLabel="view live"
                 className={cn(buttonVariants(), "bg-brand hover:opacity-90")}
               >
                 <ExternalLink className="size-4" />
                 view live
-              </a>
+              </CodeLink>
             )}
             {project.repo && (
-              <a
+              <CodeLink
                 href={project.repo}
-                target="_blank"
-                rel="noopener noreferrer"
+                external
+                previewLabel="source"
                 className={buttonVariants({ variant: "outline" })}
               >
                 <GithubIcon className="size-4" />
                 source
-              </a>
+              </CodeLink>
             )}
           </div>
         </header>

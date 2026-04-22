@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
+import { CodeLink } from "@/components/site/code-link";
 import { Container } from "@/components/site/container";
 import { Prompt } from "@/components/site/prompt";
 import { TechPill } from "@/components/site/tech-pill";
@@ -42,13 +42,14 @@ export default async function ExperienceDetailPage({
   return (
     <Container>
       <div className="py-10">
-        <Link
+        <CodeLink
           href="/about"
+          previewLabel="cd .."
           className={buttonVariants({ variant: "ghost", size: "sm", className: "mb-6 gap-1" })}
         >
           <ArrowLeft className="size-4" />
           cd ..
-        </Link>
+        </CodeLink>
 
         <header className="space-y-4">
           <Prompt path={`experience/${job.slug}`} />

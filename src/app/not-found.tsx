@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { CodeLink } from "@/components/site/code-link";
 import { Container } from "@/components/site/container";
 import { Prompt } from "@/components/site/prompt";
 import { buttonVariants } from "@/components/ui/button";
@@ -18,12 +17,13 @@ export default function NotFound() {
           <span className="text-destructive">error:</span> route does not exist
           in this build. try going back home.
         </p>
-        <Link
+        <CodeLink
           href="/"
+          previewLabel="cd ~/"
           className={cn(buttonVariants(), "bg-brand hover:opacity-90")}
         >
           cd ~/
-        </Link>
+        </CodeLink>
       </section>
     </Container>
   );

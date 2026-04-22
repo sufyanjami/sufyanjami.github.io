@@ -1,11 +1,13 @@
-import Link from "next/link";
 import { Mail, Globe, type LucideIcon } from "lucide-react";
 
 import { GithubIcon, LinkedinIcon } from "@/components/icons/brand";
+import { CodeLink } from "@/components/site/code-link";
 import { INFO, type SocialLink } from "@/content/portfolio";
 import { cn } from "@/lib/utils";
 
-type IconComponent = LucideIcon | ((props: { className?: string }) => React.JSX.Element);
+type IconComponent =
+  | LucideIcon
+  | ((props: { className?: string }) => React.JSX.Element);
 
 const ICONS: Record<SocialLink["icon"], IconComponent> = {
   github: GithubIcon as IconComponent,
@@ -43,15 +45,15 @@ function SocialItem({
   const isExternal = social.href.startsWith("http");
 
   return (
-    <Link
+    <CodeLink
       href={social.href}
-      target={isExternal ? "_blank" : undefined}
-      rel={isExternal ? "noopener noreferrer" : undefined}
-      aria-label={social.label}
+      external={isExternal}
+      previewLabel={social.label.toLowerCase()}
+      ariaLabel={social.label}
       className="border-border text-muted-foreground hover:text-brand hover:border-brand inline-flex items-center gap-2 rounded-sm border px-3 py-2 font-mono text-xs transition-colors"
     >
       <Icon className="size-3.5" />
       {variant === "labelled" && <span>{social.label}</span>}
-    </Link>
+    </CodeLink>
   );
 }

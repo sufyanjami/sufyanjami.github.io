@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowRight, FileDown } from "lucide-react";
 
+import { CodeLink } from "@/components/site/code-link";
 import { Socials } from "@/components/site/socials";
 import { Typewriter } from "@/components/site/typewriter";
 import { buttonVariants } from "@/components/ui/button";
@@ -33,22 +33,23 @@ export function Hero() {
           </TerminalCard>
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
+            <CodeLink
               href={INFO.main.resume}
-              target="_blank"
-              rel="noopener"
+              external
+              previewLabel="resume.pdf"
               className={cn(buttonVariants(), "bg-brand hover:opacity-90")}
             >
               <FileDown className="size-4" />
               resume.pdf
-            </Link>
-            <Link
+            </CodeLink>
+            <CodeLink
               href="/projects"
+              previewLabel="view projects"
               className={buttonVariants({ variant: "outline" })}
             >
               view projects
               <ArrowRight className="size-4" />
-            </Link>
+            </CodeLink>
             <Socials className="ml-1" />
           </div>
         </div>
