@@ -9,7 +9,7 @@ export function TechStack() {
       id="tech-stack"
       path="tech-stack"
       title="Tech Stack"
-      description="The tools I reach for, organized by what they do."
+      description="What I reach for, by category."
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {Object.entries(INFO.techStack).map(([category, items]) => (

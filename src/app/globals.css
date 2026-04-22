@@ -14,6 +14,7 @@
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
   --color-brand-muted: var(--brand-muted);
+  --color-brand-alt: var(--brand-alt);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -54,10 +55,11 @@
 }
 
 :root {
-  /* Brand — change these in one place to re-skin the whole site */
-  --brand: #06b6d4;            /* cyan-500 */
+  /* Brand — Ubuntu/Yaru terminal palette. Change in one place to re-skin. */
+  --brand: #26a269;            /* Yaru green — used for $ prompt, CTAs */
   --brand-foreground: #ffffff;
-  --brand-muted: #cffafe;       /* cyan-100 */
+  --brand-alt: #1a5fb4;        /* Yaru blue — used for ~/path segments */
+  --brand-muted: #d1fae5;       /* mint */
 
   --background: #fafafa;
   --foreground: #18181b;
@@ -94,9 +96,10 @@
 }
 
 .dark {
-  --brand: #22d3ee;            /* cyan-400 */
-  --brand-foreground: #082f49;
-  --brand-muted: #164e63;       /* cyan-900 */
+  --brand: #33d17a;            /* Yaru bright green */
+  --brand-foreground: #052e16;
+  --brand-alt: #62a0ea;        /* Yaru bright blue */
+  --brand-muted: #14532d;       /* deep green */
 
   --background: #09090b;
   --foreground: #fafafa;
@@ -141,6 +144,7 @@
   }
   html {
     @apply font-mono;
+    scrollbar-gutter: stable;
   }
   ::selection {
     background-color: var(--brand);
@@ -173,5 +177,11 @@
   .bg-brand {
     background-color: var(--brand);
     color: var(--brand-foreground);
+  }
+  .text-brand-alt {
+    color: var(--brand-alt);
+  }
+  .border-brand-alt {
+    border-color: var(--brand-alt);
   }
 }

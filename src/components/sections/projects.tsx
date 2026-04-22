@@ -8,7 +8,7 @@ export function Projects({ withFilter = false }: { withFilter?: boolean }) {
       id="projects"
       path="projects"
       title="Side Projects"
-      description="Things I built to scratch my own itch or to learn something new."
+      description="Tools I wanted to exist. Built on weekends."
     >
       <ProjectsGrid projects={INFO.projects} withFilter={withFilter} />
     </Section>

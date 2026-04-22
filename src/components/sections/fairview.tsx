@@ -23,7 +23,7 @@ export function Fairview() {
     <Section
       id="fairview"
       path="fairview-software"
-      title={`${INFO.fairview.role} of ${INFO.fairview.company}`}
+      title={`${INFO.fairview.company}`}
       description={INFO.fairview.summary}
     >
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

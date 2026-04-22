@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { ArrowRight, X } from "lucide-react";
+import { X } from "lucide-react";
 
+import { CdLink } from "@/components/site/cd-link";
 import { TechPill } from "@/components/site/tech-pill";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -76,14 +77,6 @@ export function ProjectsGrid({
           >
             <Card className="hover:border-brand/60 h-full transition-colors">
               <CardContent className="flex h-full flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-muted-foreground font-mono text-[11px]">
-                    {project.slug}
-                  </span>
-                  <span className="text-brand opacity-0 transition-opacity group-hover:opacity-100">
-                    →
-                  </span>
-                </div>
                 <h3 className="text-foreground text-base font-semibold tracking-tight">
                   {project.title}
                 </h3>
@@ -100,9 +93,7 @@ export function ProjectsGrid({
                     </span>
                   )}
                 </div>
-                <div className="text-brand inline-flex items-center gap-1 font-mono text-xs">
-                  view details <ArrowRight className="size-3" />
-                </div>
+                <CdLink slug={project.slug} />
               </CardContent>
             </Card>
           </Link>

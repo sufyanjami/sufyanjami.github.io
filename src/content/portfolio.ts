@@ -74,9 +74,14 @@ export const INFO = {
   ] satisfies SocialLink[],
 
   homepage: {
-    headline: "Full Stack Developer with a focus on enterprise SaaS.",
+    headline: "Full-stack engineer. Mostly SaaS.",
     description:
-      "I've rebuilt flagship products, architected shared component libraries, and delivered features across frontend, backend, and cloud infrastructure. I work wherever the problem needs solving.",
+      "TypeScript, SvelteKit, .NET, Azure. Currently at Entergrade shipping enterprise SaaS for Microsoft Teams telephony, and building products at Fairview Software.",
+    stack: ["TypeScript", "SvelteKit", ".NET", "Azure"],
+    now: [
+      { at: "entergrade", doing: "enterprise SaaS · Microsoft Teams telephony" },
+      { at: "fairview", doing: "building products" },
+    ],
   },
 
   about: {
@@ -89,24 +94,24 @@ export const INFO = {
     company: "Fairview Software",
     role: "Founder",
     summary:
-      "Fairview Software builds focused products that solve real problems with minimal friction. Pay for what you use, ship fast, no bloat.",
+      "A small product company I run on the side. Ships when ready, no roadmap theater.",
     products: [
       {
         slug: "fairview-sites",
         name: "Fairview Sites",
-        tagline: "Flagship — website builder, generated and deployed for you.",
+        tagline: "Form-to-website generator with an editor. Deploys on purchase.",
         description:
-          "Fill out a form and a website is generated for you. Pay once and it's deployed automatically. Comes with a simple, easy-to-use editor so you can tweak anything without touching code.",
+          "Fill out a form → site generated → checkout → auto-deployed. Includes an editor for changes after publish, no code needed.",
         status: "in-development",
         tech: ["SvelteKit", "TypeScript", "Tailwind CSS", "Cloud Deploy"],
       },
       {
         slug: "yt-transcriber",
         name: "YT Transcriber",
-        tagline: "YouTube videos in, clean transcripts out.",
+        tagline: "YouTube URLs in, transcripts out.",
         description:
-          "Drop in a YouTube link and get a transcript back. $10/month for 1000 transcriptions — built for creators, researchers, and anyone tired of paying per minute.",
-        pricing: "$10 / month — 1000 transcriptions",
+          "Paste a YouTube link, get a transcript. Flat-rate pricing — no per-minute nickel-and-diming.",
+        pricing: "$10 / month · 1000 transcriptions",
         status: "live",
         tech: ["TypeScript", "Whisper", "Cloud Functions"],
       },
