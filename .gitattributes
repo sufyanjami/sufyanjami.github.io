@@ -1,0 +1,9 @@
+# Keep line endings LF in the repo regardless of platform checkout.
+* text=auto eol=lf
+
+# Binary assets — never touch.
+*.png binary
+*.jpg binary
+*.webp binary
+*.pdf binary
+*.ico binary

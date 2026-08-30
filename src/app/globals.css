@@ -1,0 +1,213 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jetbrains-mono);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-heading: var(--font-jetbrains-mono);
+
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Single accent. Change --brand and the whole site re-skins. */
+  /* Amber/sienna. `text-brand` is body-size throughout (nav, prompts, tech
+     pills), so it is held to 4.5:1 on --background: this is 5.38:1, and white
+     on it is 5.62:1. Lighter, more saturated ambers read better but fail both. */
+  --brand: #A0522D;
+  --brand-foreground: #ffffff;
+
+  --background: #fafafa;
+  --foreground: #1f1f1f;
+  --card: #ffffff;
+  --card-foreground: #1f1f1f;
+  --popover: #ffffff;
+  --popover-foreground: #1f1f1f;
+  --primary: #1f1f1f;
+  --primary-foreground: #fafafa;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #1f1f1f;
+  --muted: #f4f4f5;
+  --muted-foreground: #6b7280;
+  --accent: #f4f4f5;
+  --accent-foreground: #1f1f1f;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: var(--brand);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.25rem;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #1f1f1f;
+  --sidebar-primary: #1f1f1f;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f4f4f5;
+  --sidebar-accent-foreground: #1f1f1f;
+  --sidebar-border: #e4e4e7;
+  --sidebar-ring: var(--brand);
+}
+
+.dark {
+  /* Anthropic clay. On #121212 this is 6.00:1 as text. It is a light colour,
+     so the button pairing is inverted: dark foreground on brand, not white,
+     which white would only reach 3.12:1. */
+  --brand: #D97757;
+  --brand-foreground: #121212;
+
+  --background: #121212;
+  --foreground: #e0e0e0;
+  --card: #1a1a1a;
+  --card-foreground: #e0e0e0;
+  --popover: #1a1a1a;
+  --popover-foreground: #e0e0e0;
+  --primary: #e0e0e0;
+  --primary-foreground: #121212;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #e0e0e0;
+  --muted: #1f1f1f;
+  --muted-foreground: #888888;
+  --accent: #1f1f1f;
+  --accent-foreground: #e0e0e0;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #2a2a2a;
+  --input: #2a2a2a;
+  --ring: var(--brand);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: #121212;
+  --sidebar-foreground: #e0e0e0;
+  --sidebar-primary: #e0e0e0;
+  --sidebar-primary-foreground: #121212;
+  --sidebar-accent: #1f1f1f;
+  --sidebar-accent-foreground: #e0e0e0;
+  --sidebar-border: #2a2a2a;
+  --sidebar-ring: var(--brand);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-mono antialiased;
+    font-feature-settings: "ss01", "cv01", "cv02";
+  }
+  html {
+    @apply font-mono;
+    scrollbar-gutter: stable;
+  }
+  ::selection {
+    background-color: var(--brand);
+    color: var(--brand-foreground);
+  }
+}
+
+@layer utilities {
+  .text-brand {
+    color: var(--brand);
+  }
+  .border-brand {
+    border-color: var(--brand);
+  }
+  .bg-brand {
+    background-color: var(--brand);
+    color: var(--brand-foreground);
+  }
+  /**
+   * Static hero wash. Painted immediately and always present underneath the
+   * shader canvas, so it covers the shader's load time and stands in entirely
+   * when JS or WebGL is unavailable. It approximates Grainient's diagonal
+   * blend, so the handover when the shader mounts is not a visible jump.
+   *
+   * Both themes are keyed to the same warm hue the shader uses. The light
+   * coverage is set so the wash lands near #e5cdc3, against a shader whose
+   * lightMode output averages #e0cdc4. At the original 16% it washed out to
+   * near-white and the handover visibly flashed.
+   */
+  .hero-wash {
+    background:
+      radial-gradient(ellipse 78% 70% at 74% 30%, color-mix(in oklab, var(--brand) 28%, transparent), transparent 72%),
+      radial-gradient(ellipse 70% 66% at 12% 88%, color-mix(in oklab, var(--brand) 17%, transparent), transparent 74%),
+      var(--background);
+  }
+  .dark .hero-wash {
+    background:
+      linear-gradient(115deg, #6c4f3673 0%, #29221d 46%, #1a1a19 100%),
+      #1a1a19;
+  }
+
+  /**
+   * Shapes the backdrop rather than hiding it. Three jobs, in paint order:
+   * Down to two jobs now. Grainient covers the frame evenly and its palette is
+   * already dark enough to carry text, so the directional panel that earlier
+   * shapes needed is gone: just a vignette to settle the edges, and a bottom
+   * fade to hand off to the next section instead of ending on a hard line.
+   */
+  .hero-scrim {
+    background:
+      radial-gradient(
+        ellipse 115% 95% at 50% 42%,
+        transparent 55%,
+        color-mix(in oklab, var(--background) 30%, transparent) 100%
+      ),
+      linear-gradient(to bottom, transparent 84%, var(--background) 100%);
+  }
+
+  @keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  .animate-cursor {
+    animation: cursor-blink 1s infinite;
+  }
+}
