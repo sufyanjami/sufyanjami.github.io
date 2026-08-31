@@ -26,12 +26,24 @@ export function Fairview() {
       title={INFO.fairview.company}
       description={INFO.fairview.summary}
     >
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {INFO.fairviewProjects.map((product) => (
-          <ProductCard key={product.slug} product={product} />
-        ))}
-      </div>
+      <ProductGrid products={INFO.fairviewProjects} />
     </Section>
+  );
+}
+
+/**
+ * Shared by this section and the Fairview block on /projects, so a product
+ * reads the same wherever it appears. The plain ProjectsGrid card has no
+ * status, tagline, or pricing, which for a product drops the one signal that
+ * says whether it is shipped; tools have no status to lose and still use it.
+ */
+export function ProductGrid({ products }: { products: Project[] }) {
+  return (
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      {products.map((product) => (
+        <ProductCard key={product.slug} product={product} />
+      ))}
+    </div>
   );
 }
 

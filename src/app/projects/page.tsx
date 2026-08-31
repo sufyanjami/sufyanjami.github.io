@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { ProductGrid } from "@/components/sections/fairview";
 import { ProjectsGrid } from "@/components/sections/projects-grid";
 import { Container } from "@/components/site/container";
 import { Prompt } from "@/components/site/prompt";
@@ -33,7 +34,7 @@ export default function ProjectsPage() {
             {INFO.fairview.summary}
           </p>
         </div>
-        <ProjectsGrid projects={INFO.fairviewProjects} />
+        <ProductGrid products={INFO.fairviewProjects} />
       </section>
 
       <section className="space-y-6 border-t pt-16 pb-20">
