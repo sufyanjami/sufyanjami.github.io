@@ -63,7 +63,7 @@ function ProductCard({ product }: { product: Project }) {
         </p>
         {product.pricing && (
           <p className="border-border/70 text-foreground bg-muted/30 rounded-sm border px-3 py-2 font-mono text-xs">
-            <span className="text-brand">→</span> {product.pricing}
+            <span className="text-brand">{"->"}</span> {product.pricing}
           </p>
         )}
         <div className="flex flex-wrap gap-1.5">

@@ -126,7 +126,7 @@ export const INFO = {
         {
           name: "Flagship Portal Rebuild",
           description:
-            "Frontend rebuild plus .NET/C# backend refactor (v1 → v2).",
+            "Frontend rebuild plus .NET/C# backend refactor (v1 -> v2).",
         },
         {
           name: "Call Archiving Product",
@@ -276,7 +276,7 @@ export const INFO = {
       title: "Mainmark",
       tagline: "Form-to-website generator with an editor. Deploys on purchase.",
       description:
-        "Fill out a form → site generated → preview and edit free → pay to publish. Includes an editor for changes after publish, no code needed.",
+        "Fill out a form -> site generated -> preview and edit free -> pay to publish. Includes an editor for changes after publish, no code needed.",
       status: "beta",
       tech: [
         "Astro",
@@ -332,7 +332,7 @@ export const INFO = {
           "Paste JSON on the left, get typed code on the right. No server, no dependencies beyond the build toolchain.",
         why: "I convert API responses into typed interfaces constantly, and I wanted that to work offline in a tab I already had open. Keeping it client-side meant most of the work went into type inference: unifying mixed arrays, telling ints from floats, and handling reserved keywords.",
         features: [
-          "Real-time JSON → TS / C# conversion",
+          "Real-time JSON -> TS / C# conversion",
           "Editable output",
           "Format JSON",
           "Upload .json file",

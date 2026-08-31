@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Inline `cd ./<slug> →` affordance for card navigation.
+ * Inline `cd ./<slug> ->` affordance for card navigation.
  * Hidden by default, fading in when the parent `.group` is hovered or focused,
  * with a small arrow nudge. Always visible if the user prefers reduced motion.
  * Space is reserved via opacity (not display) to prevent layout shift on hover.
