@@ -2,9 +2,8 @@
  * Resizes the full-resolution source photos in assets/ into web-sized WebP
  * in public/. Runs automatically before `dev` and `build`.
  *
- * The originals are 3024x4032 phone photos (~2.4 MB each) displayed in a
- * ~320px square box. They live outside public/ so the full-resolution files
- * never ship in the static export; only the generated WebP does.
+ * Sources live outside public/ so the originals never ship in the static
+ * export; only the generated WebP does.
  */
 import { mkdir, stat } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
@@ -15,13 +14,14 @@ import sharp from "sharp";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 /**
- * 2x the ~320px display box. `position` picks which part of the portrait
- * survives the square crop.
+ * 2x the ~320px display box. `position` picks which part of the source
+ * survives the square crop; alcatraz.jpeg is 955x1004, so the square takes
+ * almost the whole frame and only ~49px comes off the height.
  *
  * Add an entry here to build another source photo from assets/ into public/.
  */
 const IMAGES = [
-  { src: "assets/headshot-dark.png", out: "public/me.webp", size: 640, position: "attention" },
+  { src: "assets/alcatraz.jpeg", out: "public/me.webp", size: 640, position: "center" },
 ];
 
 async function mtime(path) {
