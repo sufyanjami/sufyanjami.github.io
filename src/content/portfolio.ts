@@ -293,7 +293,7 @@ export const INFO = {
       detail: {
         summary:
           "Load or paste Markdown, edit it in the browser, and export a clean PDF with no browser print headers or footers. Renders GitHub Flavored Markdown and sanitizes the HTML before preview. No backend and no upload path, so files stay local to the browser session.",
-        why: "I kept wanting a fast way to turn Markdown into a properly formatted PDF without pasting it into an online converter or opening a full editor. Building it let me work with the unified, remark, and rehype pipeline and convert a Markdown AST directly into a pdfmake document definition, so the output is properly typeset rather than a capture of the print dialog.",
+        why: "I wanted a fast, local way to turn Markdown into a properly formatted PDF, entirely in the browser. Building it let me work with the unified, remark, and rehype pipeline and convert a Markdown AST directly into a pdfmake document definition, so the PDF is typeset from the document structure itself.",
         features: [
           "Load .md and .markdown files",
           "Edit Markdown in the browser",
@@ -332,7 +332,7 @@ export const INFO = {
           "Copy to clipboard",
         ],
         highlights: [
-          "Smart type unification",
+          "Type unification across mixed value types",
           "int vs float distinction",
           "Mixed array handling",
           "Edge cases: reserved keywords, invalid names, deep nesting",
