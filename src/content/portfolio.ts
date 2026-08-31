@@ -89,7 +89,7 @@ export const INFO = {
     /** One entry per rendered line. Layout no longer depends on punctuation. */
     headline: ["Full-stack software developer."],
     description:
-      "I build software end to end, from the database to the interface. Right now, most of that happens alongside coding agents.",
+      "I build software end to end, from the database to the interface. Right now, most of that happens alongside agents.",
   },
 
   about: {
@@ -97,7 +97,7 @@ export const INFO = {
     /** One entry per rendered paragraph. */
     description: [
       "I work remotely from my home office, fuelled by coffee and genuine excitement about where software is headed.",
-      "Over the past few years, I've grown a lot as a developer. Most of that time has been spent building complex systems. Somewhere along the way, AI agents became part of how I work and ship software. Building this way has been the most fun I've had in a very long time.",
+      "Over the past few years, I've grown a lot as a developer. Most of that time has been spent building complex systems. Somewhere along the way, agents became part of how I work and ship software. Building this way has been the most fun I've had in a very long time.",
       "I learn best by building real things, shipping them, seeing what breaks, and coming back with a better understanding. We're entering a new chapter of software, and I hope to contribute to it by continuing to build, learn, and stay open to change.",
     ],
   },
