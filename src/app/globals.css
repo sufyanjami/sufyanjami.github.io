@@ -54,10 +54,12 @@
 
 :root {
   /* Single accent. Change --brand and the whole site re-skins. */
-  /* Amber/sienna. `text-brand` is body-size throughout (nav, prompts, tech
-     pills), so it is held to 4.5:1 on --background: this is 5.38:1, and white
-     on it is 5.62:1. Lighter, more saturated ambers read better but fail both. */
-  --brand: #A0522D;
+  /* Cocoa. `text-brand` is body-size throughout (nav, prompts, tech pills), so
+     it is held to 4.5:1 on --background: this is 7.59:1, and white on it is
+     7.92:1. It also has to stay legibly apart from --foreground (#1f1f1f), or
+     the accent markers read as ordinary text; that is the floor on how dark
+     this can go, well before contrast becomes the limit. */
+  --brand: #6B4A32;
   --brand-foreground: #ffffff;
 
   --background: #fafafa;
@@ -95,10 +97,10 @@
 }
 
 .dark {
-  /* Anthropic clay. On #121212 this is 6.00:1 as text. It is a light colour,
-     so the button pairing is inverted: dark foreground on brand, not white,
-     which white would only reach 3.12:1. */
-  --brand: #D97757;
+  /* Cocoa, lightened for the dark ground. On #121212 this is 7.17:1 as text.
+     It is a light colour, so the button pairing is inverted: dark foreground
+     on brand, not white, which white would only reach 2.61:1. */
+  --brand: #BC9A7A;
   --brand-foreground: #121212;
 
   --background: #121212;
@@ -169,10 +171,13 @@
    * when JS or WebGL is unavailable. It approximates Grainient's diagonal
    * blend, so the handover when the shader mounts is not a visible jump.
    *
-   * Both themes are keyed to the same warm hue the shader uses. The light
-   * coverage is set so the wash lands near #e5cdc3, against a shader whose
-   * lightMode output averages #e0cdc4. At the original 16% it washed out to
-   * near-white and the handover visibly flashed.
+   * Light is mixed from --brand, so it re-skins with the accent: at these two
+   * coverages the cocoa brand lands the wash near #d2c9c2. Dark is a fixed
+   * bronze-to-carbon blend rather than a --brand mix, because the dark ground
+   * needs a deeper low end than one accent colour can carry on its own.
+   *
+   * Coverage is the dial to reach for if the handover ever flashes: too low
+   * and the light wash washes out to near-white before the shader mounts.
    */
   .hero-wash {
     background:

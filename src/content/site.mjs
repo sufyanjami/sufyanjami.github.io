@@ -14,7 +14,7 @@ export const SITE = {
 
 /** Palette the OG card borrows from globals.css `.dark`. */
 export const OG_COLORS = {
-  brand: "#D97757",
+  brand: "#BC9A7A",
   background: "#121212",
   foreground: "#e0e0e0",
   muted: "#888888",
