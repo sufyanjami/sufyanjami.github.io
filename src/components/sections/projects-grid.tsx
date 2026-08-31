@@ -103,15 +103,13 @@ function ProjectCard({ project }: { project: Project }) {
         <p className="text-muted-foreground flex-1 text-sm leading-relaxed">
           {project.description}
         </p>
+        {/* Every pill, no overflow count. Cards are `h-full` in a stretch
+            grid, so a longer stack just sets the row height and its neighbour
+            matches it. */}
         <div className="flex flex-wrap gap-1.5">
-          {project.tech.slice(0, 4).map((t) => (
+          {project.tech.map((t) => (
             <TechPill key={t} label={t} />
           ))}
-          {project.tech.length > 4 && (
-            <span className="text-muted-foreground font-mono text-[11px]">
-              +{project.tech.length - 4}
-            </span>
-          )}
         </div>
       </CardContent>
     </Card>
