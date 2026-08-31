@@ -272,13 +272,21 @@ export const INFO = {
       },
     },
     {
-      slug: "fairview-sites",
-      title: "Fairview Sites",
+      slug: "mainmark",
+      title: "Mainmark",
       tagline: "Form-to-website generator with an editor. Deploys on purchase.",
       description:
-        "Fill out a form → site generated → checkout → auto-deployed. Includes an editor for changes after publish, no code needed.",
-      status: "in-development",
-      tech: ["SvelteKit", "TypeScript", "Tailwind CSS", "Cloudflare"],
+        "Fill out a form → site generated → preview and edit free → pay to publish. Includes an editor for changes after publish, no code needed.",
+      status: "beta",
+      tech: [
+        "Astro",
+        "React Router 7",
+        "TypeScript",
+        "Tailwind CSS",
+        "Cloudflare Workers",
+        "Stripe",
+        "Gemini",
+      ],
     },
   ] satisfies Project[],
 
