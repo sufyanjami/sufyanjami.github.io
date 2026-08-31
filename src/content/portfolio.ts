@@ -248,19 +248,19 @@ export const INFO = {
       title: "YT Transcriber",
       tagline: "YouTube URLs in, transcripts out.",
       description:
-        "Paste a YouTube link, get a transcript. Flat-rate pricing, no per-minute billing.",
+        "Paste a YouTube link, get a transcript. One flat monthly rate, any video length.",
       pricing: "$10 / month · 1000 transcriptions",
       status: "live",
       tech: ["TypeScript", "Whisper", "Cloud Functions", "Stripe"],
       live: "https://yt-transcriber.io/",
       detail: {
         summary:
-          "Paste a YouTube link, get a transcript. Shipped and live at yt-transcriber.io under Fairview Software. Flat-rate subscription ($10/mo for 1000 transcriptions) instead of the per-minute model most transcription tools use.",
+          "Paste a YouTube link, get a transcript. Shipped and live at yt-transcriber.io under Fairview Software. One flat subscription at $10/mo for 1000 transcriptions, where a three-hour video costs the same as a three-minute one.",
         why: "I wanted transcription pricing I could predict up front, one flat rate with no math per video. Building it also gave me an end-to-end SaaS surface to own: auth, billing, background jobs, deployment.",
         features: [
           "Paste a YouTube URL, get a full transcript",
           "Flat-rate pricing: $10/mo for 1000 transcriptions",
-          "No per-minute billing",
+          "Any video length, same price",
           "Subscription management via Stripe",
         ],
         highlights: [
